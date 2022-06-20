@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisher Almasri - Home</title>
+    <meta content="Bisher Almasri" property="og:title" />
+    <meta content="The Site For Bisher Almasri" property="og:description" />
+    <meta content="https://bisheralmasri.github.io/Web" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/BisherAlmasri/Web/main/images/Logo.png" property="og:image" />
+    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>    </head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="img/Logo.png"></a>
+        <div class="nav-links" id="navLinks" >
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html" id="links0">HOME</a></li>
+                <li><a href="about.html" id="links1">ABOUT ME</a></li>
+                <li><a href="" id="links2">BLOG</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+<div class="text-box">
+    <h1>Bisher Almasri
+    </h1>
+    <p>A Young Man Who Mastered 8 Coding Languages</p>
+    <a href="about.html" class="hero-btn">Click To Learn More!</a>
+</div>
+
+</section>
+
+<!-- Acomplishemnts -->
+
+<section class="Acomplishemnts">
+    <h1>My Acomplishemnts!</h1>
+    <p>All of My Acomplishemnts that I have Made!</p>
+    <div class="row">
+        <div class="Acomplishemnts-col">
+            <h3>Learning 9 Coding Languages</h3>
+            <p>I Have Learned 8 Diffrent Coding Languages In A Span Of 9 Months, Ranging to Python, JavaScript, Typescript, C-Sharp, And So On.</p>
+        </div>
+        <div class="Acomplishemnts-col">
+            <h3>Game Developer</h3>
+            <p>I Have Made Many Games, And Tools To Use, My Game Developing Tools Are, Unity, And Pygame! My Games Consist Of Simple And Fun Games!</p>
+        </div>
+        <div class="Acomplishemnts-col">
+            <h3>Web Developer</h3>
+            <p>Altho Website Development Sounds Easy, Its More Just Learning Html, You Need To Learn JavaScript And Css. Websites Need To Have A Smooth Main Color And Theme!</p>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+
+<section class="Projects">
+    <h1>My Projects</h1>
+    <p>My New And Upcoming Projects</p>
+    
+    <div class="row">
+        <div class="Projects-col">
+            <img src="img/vscode_purple.png">
+            <h3>Co-Purple</h3>
+            <p>Co Purple Which Stands For Code Purple Is A Visual Studio Theme, It Is A Dark Theme And It Focuses On 1 Main Dark Purple Color!</p>
+    </div>
+           <div class="Projects-col">
+            <img src="img/vscode_blue.png">
+            <h3>Co-Blue (Un Released!)</h3>
+            <p>Co Blue Which Stands For Code Blue Is A Visual Studio Theme, It Is A Dark Theme And It Focuses On 1 Main Dark Blue Color!</p>
+
+</section>
+
+<section class="footer">
+    <h4>CONTACT ME</h4>
+    <p>All My Social Medias!</p>
+    <div class="icons">
+       <a href="https://www.youtube.com/channel/UCV2NwdDuTV1Q5XM1JbWmuzg"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://github.com/BisherAlmasri/"><i class="fa-brands fa-github"></i></a>
+        </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+    var navLinks = document.getElementById("navLinks")
+    var links0 = document.getElementById("links")
+    var links1 = document.getElementById("links1")
+    var links2 = document.getElementById("links2")
+
+    function hideMenu() {
+        navLinks.style.visibility = "hidden";
+        navLinks.style.opacity = "0";
+        links0.setAttribute("href", "");
+        links1.setAttribute("href", "");
+        links2.setAttribute("href", "");
+    }
+    function showMenu() {
+        navLinks.style.transition = "0.5s"
+        navLinks.style.visibility = "visible";
+        navLinks.style.opacity = "1";
+        links0.setAttribute("href", "index.html");
+        links1.setAttribute("href", "about.html");
+        links2.setAttribute("href", "");
+    }
+</script>
+</body>
