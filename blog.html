@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .row {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    translate: translateY(10px);
+}
+
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+   transition: 0.5s;
+}
+
+.card a{
+    color: black;
+    text-decoration: none;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisher Almasri - Blogs</title>
+    <meta content="Bisher Almasri" property="og:title" />
+    <meta content="The Site For Bisher Almasri" property="og:description" />
+    <meta content="https://bisheralmasri.github.io/Web2/blog.html" property="og:url" />
+    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>    </head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="img/Logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html" id="links">HOME</a></li>
+                <li><a href="about.html" id="links1">ABOUT ME</a></li>
+                <li><a href="blog.html" id="links2">BLOG</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Blogs</h1>
+</section>
+
+<div class="row">
+    <div class="leftcolumn">
+      <div class="card" onclick="location.href='./blogs/Discord-Js-Bot.html'">
+        <h2>Discord Js Bot</h2>
+        <h5>Discord Js Bot, Jun 21 Tue 2021</h5>
+        <div style="height:200px;"></div>
+        <p>A quick and simple bot to make!</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<section class="footer">
+    <h4>CONTACT ME</h4>
+    <p>All My Social Medias!</p>
+    <div class="icons">
+       <a href="https://www.youtube.com/channel/UCV2NwdDuTV1Q5XM1JbWmuzg"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://github.com/BisherAlmasri/"><i class="fa-brands fa-github"></i></a>
+        <p>Copyright &copy; 2020 Bisher Almasri</p>
+        </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+    var navLinks = document.getElementById("navLinks")
+    var links0 = document.getElementById("links")
+    var links1 = document.getElementById("links1")
+    var links2 = document.getElementById("links2")
+
+    function hideMenu() {
+        navLinks.style.visibility = "hidden";
+        navLinks.style.opacity = "0";
+        links0.setAttribute("href", "");
+        links1.setAttribute("href", "");
+        links2.setAttribute("href", "");
+    }
+    function showMenu() {
+        navLinks.style.transition = "0.5s"
+        navLinks.style.visibility = "visible";
+        navLinks.style.opacity = "1";
+        links0.setAttribute("href", "index.html");
+        links1.setAttribute("href", "about.html");
+        links2.setAttribute("href", "../blog.html");
+    }
+</script>
+</body>
+</html>
