@@ -109,6 +109,10 @@ nav .fa {
         visibility: hidden;
         opacity: 0;
     }
+    .code p{
+        font-size: 15px;
+        color: white;
+    }
     nav .fa {
         display: block;
         color: #fff;
@@ -276,4 +280,13 @@ h3 {
     background: #f44336;
     transition: 0.5s;
     color: #fff;
+}
+
+.code {
+    background: #292727;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
