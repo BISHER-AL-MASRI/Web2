@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        button {
+            background-color: #43B581;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.5s;
+            top: 100%;
+            right: 100%;
+        }
+        button:hover {
+            background-color: #3b9c70;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .link {
+            text-decoration: none;
+            color: #43B581;
+        }
+        .link:hover {
+            color: #3b9c70;
+            text-decoration: underline;
+        }
+        .link:visited {
+            color: #43B581;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisher Almasri - Discord Js Bot</title>
+    <meta content="Bisher Almasri" property="og:title" />
+    <meta content="The Site For Bisher Almasri" property="og:description" />
+    <meta content="https://bisheralmasri.github.io/Web2/blogs/Discord-Js-Bot.html" property="og:url" />
+    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>    </head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="../index.html"><img src="../img/Logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="../index.html" id="links">HOME</a></li>
+                <li><a href="../about.html" id="links1">ABOUT ME</a></li>
+                <li><a href="../blog.html" id="links2">BLOG</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Discord Js Bot</h1>
+</section>
+
+
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>Getting Started</h1>
+            <p>To get started we need to make a file i made mines named <b>Discord Bot Blog</b> but you can name it to anything.<br>Now we need to install discord.js by runing <pre class="code"><code>npm i discord.js</code></pre> <button onclick="copy()">Copy</button>          <div class="about-col">
+                <img src="img/Discord.png">
+        </div>  <br> <br> <br>   Now we need to set up our index.js by writing <pre class="code"><code>let Discord = require('discord.js');
+let client = new Discord.Client({ 
+intents: ['GUILDS', 
+'GUILD_MEMBERS', 
+'GUILD_MESSAGES',
+ 'GUILD_MESSAGE_REACTIONS'] });
+let token = 'Your Token';
+            
+            client.on('ready', () => {
+                console.log(`Logged in!`)
+            });
+            
+            client.login(token)</code></pre> <button onclick="copy2()">Copy</button> <div class="about-col">
+                <img src="img/Discord1.png"> <br> <br> <br>
+                </div> Now we need to get our token by creating a new account! Lets go to <a class="link" href="https://discord.com/developers/applications">Discord Dev Portals</a> then make a new bot I will call mine <b>Tutorial</b><div class="about-col">
+                    <img src="img/Discord2.png"> <br> <br> <br>
+            </div> So now we need make our bot by going to bot > create a bot <div class="about-col">
+                <img src="img/Discord3.png"><br> <br> <br> Now we need to add our bot and a command by doing <pre class="code"><code>let Discord = require('discord.js');
+let client = new Discord.Client({ 
+intents: ['GUILDS', 
+'GUILD_MEMBERS', 
+'GUILD_MESSAGES', 
+'GUILD_MESSAGE_REACTIONS'] });
+let token = 'token';
+    
+    client.on('ready', () => {
+        console.log(`Logged in!`)
+    });
+    
+    client.on('message', msg => {
+        if (msg.author.bot) return;
+        if (msg.content === 'ping') {
+            msg.reply('pong');
+        }
+    })
+    
+    client.login(token)</code></pre><button onclick="copy3()">Copy</button> <br> <br> <br> now run <pre class="code"><code>node .</code></pre><button onclick="copy4()">Copy</button>
+        </div>
+</section>
+
+<section class="footer">
+    <h4>CONTACT ME</h4>
+    <p>All My Social Medias!</p>
+    <div class="icons">
+       <a href="https://www.youtube.com/channel/UCV2NwdDuTV1Q5XM1JbWmuzg"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://github.com/BisherAlmasri/"><i class="fa-brands fa-github"></i></a>
+        <p>Copyright &copy; 2020 Bisher Almasri</p>
+        </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+    var navLinks = document.getElementById("navLinks")
+    var links0 = document.getElementById("links")
+    var links1 = document.getElementById("links1")
+    var links2 = document.getElementById("links2")
+
+    function hideMenu() {
+        navLinks.style.visibility = "hidden";
+        navLinks.style.opacity = "0";
+        links0.setAttribute("href", "");
+        links1.setAttribute("href", "");
+        links2.setAttribute("href", "");
+    }
+    function showMenu() {
+        navLinks.style.transition = "0.5s"
+        navLinks.style.visibility = "visible";
+        navLinks.style.opacity = "1";
+        links0.setAttribute("href", "../index.html");
+        links1.setAttribute("href", "../about.html");
+        links2.setAttribute("href", "../blog.html");
+    }
+    function copy() {
+        navigator.clipboard.writeText("npm i discord.js");
+        }
+    function copy2() {
+        navigator.clipboard.writeText("const Discord = require('discord.js');\nlet client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'] });\nlet token = 'Your Token';\n\nclient.on('ready', () => {\n    console.log(`Logged in as ${client.user.tag}!`)\n});\n\nclient.login(token)");
+        }
+    function  copy3() {
+        navigator.clipboard.writeText("const Discord = require('discord.js');\nlet client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'] });\nlet token = 'token';\n\nclient.on('ready', () => {\n    console.log(`Logged in as ${client.user.tag}!`)\n});\n\nclient.on('message', msg => {\n    if (msg.author.bot) return;\n    if (msg.content === 'ping') {\n        msg.reply('pong');\n    }\n})\n\nclient.login(token)");
+    }
+    function copy4() {
+        navigator.clipboard.writeText("node .");
+    }
+</script>
+</body>
+</html>
