@@ -69,8 +69,8 @@
             <h1>Getting Started</h1>
             <p>To get started we need to make a file i made mines named <b>Discord Bot Blog</b> but you can name it to anything.<br>Now we need to install discord.js by runing <pre class="code"><code>npm i discord.js</code></pre> <button onclick="copy()">Copy</button>          <div class="about-col">
                 <img src="img/Discord.png">
-        </div>  <br> <br> <br>   Now we need to set up our index.js by writing <pre class="code"><code>let Discord = require('discord.js');
-let client = new Discord.Client({ 
+        </div>  <br> <br> <br>   Now we need to set up our index.js by writing <pre class="code"><code id="code1">const Discord = require('discord.js');
+const client = new Discord.Client({ 
 intents: ['GUILDS', 
 'GUILD_MEMBERS', 
 'GUILD_MESSAGES',
@@ -86,26 +86,26 @@ let token = 'Your Token';
                 </div> Now we need to get our token by creating a new account! Lets go to <a class="link" href="https://discord.com/developers/applications">Discord Dev Portals</a> then make a new bot I will call mine <b>Tutorial</b><div class="about-col">
                     <img src="img/Discord2.png"> <br> <br> <br>
             </div> So now we need make our bot by going to bot > create a bot <div class="about-col">
-                <img src="img/Discord3.png"><br> <br> <br> Now we need to add our bot and a command by doing <pre class="code"><code>let Discord = require('discord.js');
-let client = new Discord.Client({ 
-intents: ['GUILDS', 
-'GUILD_MEMBERS', 
-'GUILD_MESSAGES', 
-'GUILD_MESSAGE_REACTIONS'] });
-let token = 'token';
-    
-    client.on('ready', () => {
-        console.log(`Logged in!`)
-    });
-    
-    client.on('message', msg => {
-        if (msg.author.bot) return;
-        if (msg.content === 'ping') {
-            msg.reply('pong');
-        }
-    })
-    
-    client.login(token)</code></pre><button onclick="copy3()">Copy</button> <br> <br> <br> now run <pre class="code"><code>node .</code></pre><button onclick="copy4()">Copy</button>
+                <img src="img/Discord3.png"><br> <br> <br> Now we need to add our bot and a command by doing <pre class="code"><code id="code2">const Discord = require('discord.js');
+                    const client = new Discord.Client({ 
+                        intents: ['GUILDS', 
+                        'GUILD_MEMBERS', 
+                        'GUILD_MESSAGES', 
+                        'GUILD_MESSAGE_REACTIONS'] });
+                        let token = 'token';
+                            
+                            client.on('ready', () => {
+                                console.log(`Logged in!`)
+                            });
+                            
+                            client.on('message', msg => {
+                                if (msg.author.bot) return;
+                                if (msg.content === 'ping') {
+                                    msg.reply('pong');
+                                }
+                            })
+                            
+                            client.login(token)</code></pre> <button onclick="copy3()">Copy</button> <br> <br> <br> now run <pre class="code"><code>node .</code></pre><button onclick="copy4()">Copy</button>
         </div>
 </section>
 
@@ -145,10 +145,10 @@ let token = 'token';
         navigator.clipboard.writeText("npm i discord.js");
         }
     function copy2() {
-        navigator.clipboard.writeText("const Discord = require('discord.js');\nlet client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'] });\nlet token = 'Your Token';\n\nclient.on('ready', () => {\n    console.log(`Logged in as ${client.user.tag}!`)\n});\n\nclient.login(token)");
+        navigator.clipboard.writeText("const Discord = require('discord.js');\nconst client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'] });\nlet token = 'Your Token';\n\nclient.on('ready', () => {\n    console.log(`Logged in as ${client.user.tag}!`)\n});\n\nclient.login(token)");
         }
     function  copy3() {
-        navigator.clipboard.writeText("const Discord = require('discord.js');\nlet client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'] });\nlet token = 'token';\n\nclient.on('ready', () => {\n    console.log(`Logged in as ${client.user.tag}!`)\n});\n\nclient.on('message', msg => {\n    if (msg.author.bot) return;\n    if (msg.content === 'ping') {\n        msg.reply('pong');\n    }\n})\n\nclient.login(token)");
+        navigator.clipboard.writeText("const Discord = require('discord.js');\nconst client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'] });\nlet token = 'token';\n\nclient.on('ready', () => {\n    console.log(`Logged in as ${client.user.tag}!`)\n});\n\nclient.on('message', msg => {\n    if (msg.author.bot) return;\n    if (msg.content === 'ping') {\n        msg.reply('pong');\n    }\n})\n\nclient.login(token)");
     }
     function copy4() {
         navigator.clipboard.writeText("node .");
